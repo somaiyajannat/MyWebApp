@@ -1,0 +1,22 @@
+﻿@model List<Category>
+<h1>category List Here</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">CategoryId</th>
+            <th scope="col">Name</th>
+            <th scope="col">DisplayOrder</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.OrderBy(u => u.DisplayOrder))
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.Name</td>
+                <td>@item.DisplayOrder</td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
